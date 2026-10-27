@@ -6,10 +6,6 @@
 plain language, and get answers that come *only* from that document — each one
 with numbered citations that open the exact passage it was based on.
 
-> **Live demo:** `https://<your-project>.vercel.app` · **Try it offline, no keys needed:** `npm install && npm run demo`
->
-> Deploying it yourself? See **[DEPLOY.md](DEPLOY.md)** — free on Vercel in about 20 minutes.
-
 ---
 
 ## What it does
