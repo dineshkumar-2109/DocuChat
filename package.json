@@ -1,0 +1,45 @@
+{
+  "name": "docuchat",
+  "version": "1.0.0",
+  "description": "Chat with your documents: upload a file, ask questions, get answers grounded in cited passages.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "dev:web": "vite",
+    "build": "vite build",
+    "migrate": "node src/db/migrate.js",
+    "vercel-build": "vite build && node src/db/migrate.js",
+    "demo": "vite build && node --import ./test/setup.mjs test/demo.mjs",
+    "pretest": "vite build",
+    "test": "node --import ./test/setup.mjs --test \"test/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@pinecone-database/pinecone": "^4.0.0",
+    "@vercel/functions": "^3.10.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "openai": "^4.71.0",
+    "pg": "^8.13.1",
+    "unpdf": "^1.9.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "pdf-lib": "^1.17.1",
+    "pg-mem": "^3.0.14",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^7.3.7"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
